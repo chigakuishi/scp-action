@@ -23,7 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: copy file via ssh password
-      uses: appleboy/scp-action@master
+      uses: chigakuishi/scp-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -70,7 +70,7 @@ Copy file via ssh password
 
 ```yaml
 - name: copy file via ssh password
-  uses: appleboy/scp-action@master
+  uses: chigakuishi/scp-action@master
   with:
     host: example.com
     username: foo
@@ -84,7 +84,7 @@ Copy file via ssh key
 
 ```yaml
 - name: copy file via ssh key
-  uses: appleboy/scp-action@master
+  uses: chigakuishi/scp-action@master
   with:
     host: ${{ secrets.HOST }}
     username: ${{ secrets.USERNAME }}
@@ -98,7 +98,7 @@ Example configuration for ignore list:
 
 ```yaml
 - name: copy file via ssh key
-  uses: appleboy/scp-action@master
+  uses: chigakuishi/scp-action@master
   with:
     host: ${{ secrets.HOST }}
     username: ${{ secrets.USERNAME }}
@@ -111,7 +111,7 @@ Example configuration for ignore list:
 Example configuration for multiple server
 
 ```diff
-  uses: appleboy/scp-action@master
+  uses: chigakuishi/scp-action@master
   with:
 -   host: "example.com"
 +   host: "foo.com,bar.com"
@@ -126,7 +126,7 @@ remove the specified number of leading path elements
 
 ```yaml
 - name: remove the specified number of leading path elements
-  uses: appleboy/scp-action@master
+  uses: chigakuishi/scp-action@master
   with:
     host: ${{ secrets.HOST }}
     username: ${{ secrets.USERNAME }}
@@ -158,7 +158,7 @@ Protecting a Private Key. The purpose of the passphrase is usually to encrypt th
 
 ```diff
   - name: ssh key with passphrase
-    uses: appleboy/scp-action@master
+    uses: chigakuishi/scp-action@master
     with:
       host: ${{ secrets.HOST }}
       username: ${{ secrets.USERNAME }}
